@@ -13,6 +13,7 @@ const users = [];
 
 app.set('view-engine', 'ejs');
 app.use(express.urlencoded({ extended: false }))
+app.use(flash())
 
 app.get('/', (req, res) => {
     res.render('index.ejs', { name: 'Rui' })
